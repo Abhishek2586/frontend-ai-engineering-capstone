@@ -42,11 +42,15 @@ frontend-ai-engineering-capstone/
 2. Navigate into the project directory: `cd frontend-ai-engineering-capstone`
 3. Install dependencies: `npm install`
 
-## Development Command
-Start the Vite local development server by running:
-```bash
-npm run dev
-```
+## Available Scripts
+
+In the project directory, you can run the following commands to manage the application lifecycle:
+
+- `npm run dev`: Starts the Vite local development server.
+- `npm run build`: Bundles the app into static files for production in the `dist` folder.
+- `npm run lint`: Runs ESLint to identify and report on patterns in JavaScript/React code.
+- `npm run preview`: Bootstraps a local web server to preview the production build.
+
 
 ## Git Workflow
 This project uses **Conventional Commits** for all version control changes. 
