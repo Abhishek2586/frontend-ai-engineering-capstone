@@ -1,0 +1,177 @@
+.task-manager {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #333;
+}
+
+.task-manager header h2 {
+  margin-top: 0;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.task-form {
+  margin-bottom: 1.5rem;
+}
+
+.task-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.input-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.input-group input {
+  flex-grow: 1;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.input-group button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.input-group button:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+.input-group button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.task-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  font-weight: 500;
+  color: #555;
+}
+
+.task-filters {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.task-filters button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  background-color: white;
+  color: #555;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.task-filters button:hover {
+  background-color: #f1f1f1;
+}
+
+.task-filters button.active-filter {
+  background-color: #3498db;
+  color: white;
+  border-color: #3498db;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 2rem;
+  color: #7f8c8d;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 2px dashed #ddd;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.2s;
+}
+
+.task-item:last-child {
+  border-bottom: none;
+}
+
+.task-item:hover {
+  background-color: #fafafa;
+}
+
+.task-item.completed .task-text {
+  text-decoration: line-through;
+  color: #95a5a6;
+}
+
+.task-label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  flex-grow: 1;
+}
+
+.task-label input[type="checkbox"] {
+  width: 1.25rem;
+  height: 1.25rem;
+  cursor: pointer;
+}
+
+.task-text {
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+.delete-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+}
+
+/* Accessibility focus states */
+input:focus, button:focus {
+  outline: 2px solid #3498db;
+  outline-offset: 2px;
+}
