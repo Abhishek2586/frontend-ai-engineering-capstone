@@ -61,3 +61,10 @@ This project is the Frontend AI Engineering Capstone for Week 1 Assignment FE-01
 - Clean, self-documenting code with comments only where logic is complex or non-obvious.
 - Proper error handling implemented for all asynchronous operations.
 - Application must be fully functional and free of console errors.
+
+## FE-03 Workflow Rules Learned
+1. **Holistic Form Development:** Interactive form components must not only look good but must include robust validation, comprehensive accessibility attributes (like `aria-invalid` and `aria-describedby`), and proper edge-case handling.
+2. **Beyond Visuals:** Never accept AI-generated UI solely because it looks visually correct. Always inspect the underlying markup for correctness and resilience.
+3. **Test-Driven Requirements:** New form features must always include a test suite that explicitly checks for invalid inputs, disabled states, and successful submissions.
+4. **Precision Prompting:** AI prompts should clearly define file paths, structural constraints, expected behaviors, and explicit verification steps to produce production-ready code.
+5. **Inspect-Plan-Code-Verify:** Adopt a disciplined inspect-plan-code-verify workflow when collaborating with AI tools before finalizing and committing changes.
