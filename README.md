@@ -1,16 +1,66 @@
-# React + Vite
+# Frontend AI Engineering Capstone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Assignment Name and Code
+Week 1 Assignment FE-01: Environment and AI Toolchain
 
-Currently, two official plugins are available:
+## Short Description
+A React and Vite-based frontend project serving as the capstone for the Frontend AI Engineering internship. This project demonstrates foundational skills in scaffolding modern JavaScript environments, integrating AI toolchains, and strictly adhering to industry-standard Git workflows and coding conventions.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech Stack
+- **Framework:** React
+- **Build Tool:** Vite
+- **Language:** JavaScript
+- **Linter:** ESLint
+- **Styling:** CSS
+- **Version Control:** Git & GitHub
+- **AI Assistant:** Antigravity (Google Deepmind AI toolchain)
 
-## React Compiler
+## Features Planned
+- Responsive, modern user interface.
+- AI-driven feature development and code generation.
+- Component-based scalable architecture.
+- Full Git workflow integration using Conventional Commits.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Folder Structure
+```text
+frontend-ai-engineering-capstone/
+├── node_modules/       # Project dependencies
+├── public/             # Static assets
+├── src/                # Source code (React components, CSS, App entry)
+├── .gitignore          # Ignored files and directories
+├── CLAUDE.md           # AI coding rules and conventions
+├── LICENSE             # Project license (MIT)
+├── README.md           # Project documentation
+├── eslint.config.js    # ESLint configuration
+├── index.html          # HTML entry point
+├── package.json        # NPM configuration and scripts
+└── vite.config.js      # Vite build configuration
+```
 
-## Expanding the ESLint configuration
+## Installation Steps
+1. Clone the repository to your local machine.
+2. Navigate into the project directory: `cd frontend-ai-engineering-capstone`
+3. Install dependencies: `npm install`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Development Command
+Start the Vite local development server by running:
+```bash
+npm run dev
+```
+
+## Git Workflow
+This project uses **Conventional Commits** for all version control changes. 
+Example prefixes include:
+- `feat:` for new features
+- `fix:` for bug fixes
+- `docs:` for documentation changes
+- `chore:` for routine tasks like setup and tooling
+
+## AI-Assisted Development Note
+This project heavily relies on AI-assisted development tools (Antigravity). To ensure code consistency, quality, and maintainability, an AI instruction manual (`CLAUDE.md`) is provided in the root directory. The AI assistant uses these rules to structure components, format files, and generate conventional commits.
+
+## Future Roadmap
+- Setup routing (React Router).
+- Integrate global state management.
+- Implement UI components using a design system.
+- Deploy the frontend application.
