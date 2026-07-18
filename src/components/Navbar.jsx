@@ -14,6 +14,7 @@ export default function Navbar() {
           <div className="hidden md:flex space-x-4">
             <NavLink href="/">Home</NavLink>
             <NavLink href="/dashboard">Dashboard</NavLink>
+            <NavLink href="/chat">AI Chat</NavLink>
             <NavLink href="/tasks">Tasks</NavLink>
             <NavLink href="/insights">Insights</NavLink>
             <NavLink href="/settings">Settings</NavLink>
