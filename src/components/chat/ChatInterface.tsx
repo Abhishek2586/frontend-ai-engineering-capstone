@@ -11,23 +11,8 @@ import { DefaultChatTransport } from 'ai';
 const STORAGE_KEY = 'fe06-chat-messages-v1';
 
 export default function ChatInterface() {
-  const [initialMessages, setInitialMessages] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
   const [input, setInput] = useState('');
-
-  // Load from local storage on mount
-  useEffect(() => {
-    try {
-      const stored = localStorage.getItem(STORAGE_KEY);
-      if (stored) {
-        // eslint-disable-next-line react-hooks/set-state-in-effect
-        setInitialMessages(JSON.parse(stored));
-      }
-    } catch (e) {
-      console.error('Failed to parse stored messages', e);
-    }
-    setIsLoaded(true);
-  }, []);
 
   const {
     messages,
@@ -38,8 +23,24 @@ export default function ChatInterface() {
     sendMessage
   } = useChat({
     transport: new DefaultChatTransport({ api: '/api/chat' }),
-    messages: initialMessages,
   });
+
+  // Load from local storage on mount
+  useEffect(() => {
+    try {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (stored) {
+        const parsed = JSON.parse(stored);
+        if (parsed && parsed.length > 0) {
+          setMessages(parsed);
+        }
+      }
+    } catch (e) {
+      console.error('Failed to parse stored messages', e);
+    }
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setIsLoaded(true);
+  }, [setMessages]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setInput(e.target.value);

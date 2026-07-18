@@ -6,7 +6,7 @@ import { createAnthropic } from '@ai-sdk/anthropic';
 // This module cannot be imported by client components thanks to 'server-only'.
 
 export const anthropic = createAnthropic({
-  apiKey: process.env.ANTHROPIC_API_KEY,
+  apiKey: process.env.FASTROUTER_API_KEY,
   baseURL: 'https://api.fastrouter.ai/api/v1',
 });
 
