@@ -1,5 +1,6 @@
 import { streamText, convertToModelMessages, UIMessage } from 'ai';
 import { getModel, SYSTEM_PROMPT, MAX_OUTPUT_TOKENS, TEMPERATURE } from '@/lib/ai/config';
+import { chatTools } from '@/lib/ai/tools';
 import { NextResponse } from 'next/server';
 
 export const maxDuration = 60; // Allow Vercel Function up to 60s
@@ -42,6 +43,7 @@ export async function POST(req: Request) {
       maxOutputTokens: MAX_OUTPUT_TOKENS,
       temperature: TEMPERATURE,
       abortSignal: req.signal,
+      tools: chatTools,
     });
 
     return result.toUIMessageStreamResponse();

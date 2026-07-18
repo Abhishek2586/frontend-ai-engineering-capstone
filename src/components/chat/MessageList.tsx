@@ -1,10 +1,10 @@
 import React from 'react';
-import { UIMessage } from 'ai';
+import { AppUIMessage } from '@/lib/ai/chat-types';
 import MessageBubble from './MessageBubble';
 import ThinkingIndicator from './ThinkingIndicator';
 
 interface MessageListProps {
-  messages: UIMessage[];
+  messages: AppUIMessage[];
   status: string;
 }
 

@@ -1,8 +1,9 @@
 import React from 'react';
-import { UIMessage } from 'ai';
+import { AppUIMessage } from '@/lib/ai/chat-types';
+import TaskInsightsTool from './tools/TaskInsightsTool';
 
 interface MessageBubbleProps {
-  message: UIMessage;
+  message: AppUIMessage;
 }
 
 export default function MessageBubble({ message }: MessageBubbleProps) {
@@ -28,7 +29,10 @@ export default function MessageBubble({ message }: MessageBubbleProps) {
             if (part.type === 'text') {
               return <span key={index}>{part.text}</span>;
             }
-            return <span key={index} className="italic opacity-50">[Unsupported part: {part.type}]</span>;
+            if (part.type === 'tool-getTaskInsights') {
+              return <TaskInsightsTool key={index} part={part} />;
+            }
+            return <span key={index} className="italic opacity-50 block mt-2">[Unsupported part: {part.type}]</span>;
           })}
         </div>
       </div>
